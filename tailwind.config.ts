@@ -25,10 +25,6 @@ const config = {
         epilogue: ["var(--font-epilogue)", ...fontFamily.sans],
       },
       colors: {
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
         white: "var(--white)",
         black: "var(--black)",
         divider: "var(--divider)",
@@ -51,6 +47,7 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        DEFAULT: "28px",
       },
       keyframes: {
         "accordion-down": {
