@@ -21,7 +21,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        inter: ["var(--font-inter)", ...fontFamily.sans],
+        epilogue: ["var(--font-epilogue)", ...fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",

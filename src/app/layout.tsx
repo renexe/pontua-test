@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
-import "./globals.css";
+import { Epilogue } from "next/font/google";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-export const fontSans = Inter({
+
+export const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
+})
+
+export const epilogue = Epilogue({
+  subsets: ["latin"],
+  variable: "--font-epilogue",
 })
 
 export const metadata: Metadata = {
@@ -23,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable
+        inter.variable
       )}>{children}</body>
     </html>
   );
