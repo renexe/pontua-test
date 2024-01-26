@@ -1,3 +1,4 @@
+import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
 
 export default function Home() {
@@ -22,7 +23,14 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="flex bg-white w-[380px] h-[433px] rounded"></div>
+        <div className="bg-white w-[380px] h-[433px] rounded flex flex-col px-9 py-12">
+          <Typography variant="h1">
+            Bem-vindo<span className="text-orange-500">.</span>
+          </Typography>
+          <Typography color="gray">
+            informe as suas credenciais de acesso ao portal
+          </Typography>
+        </div>
       </div>
     </main>
   );
