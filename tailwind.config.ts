@@ -55,7 +55,7 @@ const config = {
         "xl": "36px",
         "md": "24px",
         "sm": "16px",
-        "xs": "14px",
+        "xs": "11px",
       },
       borderRadius: {
         sm: "10px",

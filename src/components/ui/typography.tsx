@@ -17,6 +17,7 @@ const typographyVariants = cva(
         h5: "",
         h6: "",
         body1: "",
+        body2: "text-xs",
         link: "font-bold tracking-wider hover:underline",
         // caption: "font-normal tracking-normal text-sm",
       },
@@ -25,6 +26,7 @@ const typographyVariants = cva(
         white: "text-white",
         black: "text-black",
         gray: "text-gray-500",
+        orange: "text-orange-700",
       },
       font: {
         inter: cn("font-inter", inter.variable),
@@ -70,6 +72,7 @@ function determineComp(variant: string | undefined | null) {
     h5: "h5",
     h6: "h6",
     body1: "p",
+    body2: "p",
     link: "p",
     caption: "span"
   };
