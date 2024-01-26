@@ -33,6 +33,7 @@ const config = {
         divider: "var(--divider)",
         blue: {
           "200": "var(--blue-200)",
+          "500": "var(--blue-500)",
           "600": "var(--blue-600)",
           "800": "var(--blue-800)",
         },
@@ -50,11 +51,10 @@ const config = {
         "xl": "36px",
         "md": "18px",
         "sm": "16px",
+        "xs": "14px",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        sm: "10px",
         DEFAULT: "28px",
       },
       keyframes: {
