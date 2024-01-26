@@ -20,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      letterSpacing: {
+        tighter: "-0.07em",
+      },
       fontFamily: {
         inter: ["var(--font-inter)", ...fontFamily.sans],
         epilogue: ["var(--font-epilogue)", ...fontFamily.sans],
@@ -42,6 +45,11 @@ const config = {
           "500": "var(--gray-500)",
           background: "var(--gray-background)",
         },
+      },
+      fontSize: {
+        "xl": "36px",
+        "md": "18px",
+        "sm": "16px",
       },
       borderRadius: {
         lg: "var(--radius)",
