@@ -43,6 +43,7 @@ const config = {
         },
         gray: {
           "100": "var(--gray-100)",
+          "400": "var(--gray-400)",
           "500": "var(--gray-500)",
           background: "var(--gray-background)",
         },

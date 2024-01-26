@@ -1,24 +1,10 @@
 import { Typography } from "@/components/ui/typography";
 import { Input } from "@/components/ui/input"
 import Image from "next/image";
+import EmailIcon from "@/components/ui/icons/email-icon";
 
 export default function Home() {
-  const EmailIcon = () => (
-    <Image
-      src="/assets/icons/email.svg"
-      alt="email icon"
-      width={17}
-      height={17}
-    />
-  );
-  const PasswordIcon = () => (
-    <Image
-      src="/assets/icons/password.svg"
-      alt="password icon"
-      width={17}
-      height={17}
-    />
-  );
+
   return (
     <main className="flex min-h-screen flex-col justify-between p-2 bg-blue-800 pt-[49px] pb-[160px] px-[108px]">
 
@@ -48,8 +34,8 @@ export default function Home() {
             informe as suas credenciais de acesso ao portal
           </Typography>
           <div className="flex flex-col gap-[26px]">
-          <Input type="email" placeholder="Informe sua email" icon={<EmailIcon />} />
-          <Input type="password" placeholder="Informe sua senha" icon={<PasswordIcon />} />
+          <Input type="email" placeholder="Informe sua email" icon="email" />
+          <Input type="password" placeholder="Informe sua senha" icon="password" />
           </div>
         </div>
       </div>
