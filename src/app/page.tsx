@@ -2,6 +2,7 @@ import { Typography } from "@/components/ui/typography";
 import { Input } from "@/components/ui/input"
 import Image from "next/image";
 import EmailIcon from "@/components/ui/icons/email-icon";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
 
@@ -33,10 +34,11 @@ export default function Home() {
           <Typography color="gray" className="mb-[6px]">
             informe as suas credenciais de acesso ao portal
           </Typography>
-          <div className="flex flex-col gap-[26px]">
-          <Input type="email" placeholder="Informe sua email" icon="email" />
-          <Input type="password" placeholder="Informe sua senha" icon="password" />
-          </div>
+          <form>
+            <Input type="email" placeholder="Informe sua email" icon="email" />
+            <Input type="password" placeholder="Informe sua senha" icon="password" className="mt-[23px] mb-[11px]" />
+            <Button className="w-full">entrar</Button>
+          </form>
         </div>
       </div>
     </main>
