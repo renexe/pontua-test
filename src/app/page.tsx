@@ -1,10 +1,5 @@
-import { Typography } from "@/components/ui/typography";
-import { Input } from "@/components/ui/input"
 import Image from "next/image";
-import EmailIcon from "@/components/ui/icons/email-icon";
-import { Button } from "@/components/ui/button";
-import ShieldIcon from "@/components/ui/icons/shield-icon";
-import Link from "next/link";
+import Modal from "@/components/ui/organisms/modal";
 
 export default function Home() {
 
@@ -29,24 +24,7 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="bg-white w-[380px] rounded flex flex-col px-9 py-12">
-          <Typography variant="h1">
-            Bem-vindo<span className="text-orange-500">.</span>
-          </Typography>
-          <Typography color="gray" className="mb-[6px]">
-            informe as suas credenciais de acesso ao portal
-          </Typography>
-          <form>
-            <Input type="email" placeholder="Informe sua email" icon="email" />
-            <Input type="password" placeholder="Informe sua senha" icon="password" className="mt-[23px] mb-[11px]" />
-            <Button className="w-full">entrar</Button>
-          </form>
-          <Link href="/forgot-password" className="hover:underline underline-offset-2">
-            <Typography color="orange" variant="body2" className="w-full flex justify-end gap-1 mt-5">
-              <ShieldIcon /> Esqueceu sua senha?
-            </Typography>
-          </Link>
-        </div>
+        <Modal />
       </div>
     </main>
   );
