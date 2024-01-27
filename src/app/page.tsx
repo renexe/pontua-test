@@ -17,7 +17,7 @@ export default function Home() {
           height={50}
         />
 
-        <div className="flex justify-between items-end md:mt-16">
+        <div className="flex justify-between items-end md:mt-16 2xl:mt-32">
           <Image
             src="/assets/images/bro.svg"
             alt="imagem urbana"
