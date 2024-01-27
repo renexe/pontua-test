@@ -3,7 +3,6 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-import LoginAltIcon from "./icons/login-alt-icon"
 import { epilogue } from "@/app/layout"
 
 const buttonVariants = cva(
@@ -13,6 +12,7 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-blue-600 text-white hover:bg-blue-800",
+          disabled: "bg-gray-400 text-white",
       },
       size: {
         default: "h-[59px] px-4 py-2 rounded-sm",
@@ -28,11 +28,12 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
   VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  asChild?: boolean,
+  icon?: React.ReactNode,
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, icon, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
@@ -42,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <span className={cn("flex items-center gap-[9px] font-epilogue", epilogue.variable)}>
           {props.children}
-          <LoginAltIcon className="group-hover:translate-x-2 transition-transform duration-300" />
+          {icon && icon}
         </span>
       </Comp>
     )
