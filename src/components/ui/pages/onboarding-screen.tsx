@@ -20,8 +20,8 @@ const OnboardingScreen = () => {
           height={467}
           className="absolute bottom-0 left-0 sm:relative z-10"
         />
-        <LoginTemplate />
-        {/* <RecoverPasswordTemplate /> */}
+        {/* <LoginTemplate /> */}
+        <RecoverPasswordTemplate />
       </div>
     </div>
   )

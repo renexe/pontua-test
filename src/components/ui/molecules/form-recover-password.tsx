@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/atoms/button";
 const FormRecoverPassword = () => {
   return (
     <form>
-      <Input type="email" placeholder="Informe sua email" icon="email" className="mb-[23px]" />
+      <Input type="email" placeholder="Informe seu email" icon="email" className="mb-3" />
       <Button className="w-full">enviar link</Button>
     </form>
   )

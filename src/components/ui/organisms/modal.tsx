@@ -1,28 +1,30 @@
+import { cn } from "@/lib/utils"
 import { Typography } from "../atoms/typography"
 
 export interface ModalProps {
   children: React.ReactNode
+  className?: string
 }
 
-const Modal = ({ children }: ModalProps) => {
+const Modal = ({ children, className }: ModalProps) => {
   return (
-    <div className="bg-white w-full md:w-[23rem] rounded flex flex-col px-9 py-12 z-20">
+    <div className={cn("bg-white w-full md:w-[23rem] md:min-h-[27rem] rounded flex flex-col px-9 py-12 z-20", className)}>
       {children}
     </div>
   )
 }
 
-const ModalTitle = ({ children }: { children: React.ReactNode }) => {
+const ModalTitle = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (
-    <Typography variant="h1">
+    <Typography variant="h1" className={cn("mb-4", className)}>
       {children}
     </Typography>
   )
 }
 
-const ModalDescription = ({ children }: { children: React.ReactNode }) => {
+const ModalDescription = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (
-    <Typography color="gray" className="mb-[6px]">
+    <Typography color="gray" className={cn("mb-2", className)}>
       {children}
     </Typography>
   )
