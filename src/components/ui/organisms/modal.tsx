@@ -6,7 +6,7 @@ export interface ModalProps {
 
 const Modal = ({ children }: ModalProps) => {
   return (
-    <div className="bg-white w-[380px] rounded flex flex-col px-9 py-12">
+    <div className="bg-white w-full md:w-[23rem] rounded flex flex-col px-9 py-12 z-20">
       {children}
     </div>
   )
