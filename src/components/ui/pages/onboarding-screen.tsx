@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LoginTemplate from "@/components/ui/templates/login-template";
 import RecoverPasswordTemplate from "../templates/recover-password-template";
+import RecoverPasswordConfirmTemplate from "../templates/recover-password-confirm-template";
 
 const OnboardingScreen = () => {
   return (
@@ -21,7 +22,8 @@ const OnboardingScreen = () => {
           className="absolute bottom-0 left-0 sm:relative z-10"
         />
         {/* <LoginTemplate /> */}
-        <RecoverPasswordTemplate />
+        {/* <RecoverPasswordTemplate /> */}
+        <RecoverPasswordConfirmTemplate />
       </div>
     </div>
   )
