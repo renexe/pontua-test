@@ -4,7 +4,20 @@ import RecoverPasswordTemplate from "../templates/recover-password-template";
 import RecoverPasswordConfirmTemplate from "../templates/recover-password-confirm-template";
 import AgentSelectionTemplate from "../templates/agent-selection-template";
 
-const OnboardingScreen = () => {
+async function getHeroes() {
+  const res = await fetch('https://gateway.marvel.com/v1/public/characters?ts=1&apikey=84d1bd4d3a025bf80b0d30ad747f85b8&hash=649c4fe1ca33ed38c47a7e08a732fa8a&limit=100&offset=20')
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data on the Marvel\'s API')
+  }
+ 
+  return res.json()
+}
+
+
+const OnboardingScreen = async () => {
+  const heroes = await getHeroes();
+  
   return (
     <div className="container mx-auto flex flex-col justify-between pt-4 md:pt-[10vh]">
       <Image
@@ -25,7 +38,7 @@ const OnboardingScreen = () => {
         {/* <LoginTemplate /> */}
         {/* <RecoverPasswordTemplate /> */}
         {/* <RecoverPasswordConfirmTemplate /> */}
-        <AgentSelectionTemplate />
+        <AgentSelectionTemplate heroes={heroes.data.results} />
       </div>
     </div>
   )

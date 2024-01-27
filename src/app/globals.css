@@ -45,3 +45,7 @@ input[type="password"]::-ms-clear {
 input[type="password"]::-webkit-credentials-auto-fill-button {
   display: none !important;
 }
+
+#select-trigger[data-state='open'] #select-caret {
+  transform: rotate(180deg);
+}
