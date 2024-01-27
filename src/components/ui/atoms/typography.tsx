@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { epilogue, inter } from "@/app/layout";
 
 const typographyVariants = cva(
-  "text-sm font-normal tracking-normal tracking-tighter",
+  "text-sm font-normal tracking-tighter leading-5",
   {
     variants: {
       variant: {
