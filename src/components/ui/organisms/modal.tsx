@@ -16,7 +16,7 @@ const Modal = ({ children, className }: ModalProps) => {
 
 const ModalTitle = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (
-    <Typography variant="h1" className={cn("mb-4", className)}>
+    <Typography variant="h1" className={cn("mb-3", className)}>
       {children}
     </Typography>
   )

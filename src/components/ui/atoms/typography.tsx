@@ -10,7 +10,7 @@ const typographyVariants = cva(
   {
     variants: {
       variant: {
-        h1: "text-xl font-bold leading-8 sm:leading-5",
+        h1: "text-xl font-bold leading-8",
         h2: "",
         h3: "",
         h4: "",

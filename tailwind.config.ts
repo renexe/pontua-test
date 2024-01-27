@@ -12,14 +12,21 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      sm: "810px",
+      md: "1280px", 
+      lg: "1440px",
+      xl: "1920px",
+      "2xl": "2560px",
+    },
     container: {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
+        sm: "3rem",
+        md: "3rem",
+        lg: "6rem",
+        xl: "16rem",
       },
     },
     extend: {
