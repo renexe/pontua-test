@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalTitle } from "@/components/ui/organisms/modal";
+import Image from "next/image";
 import { Typography } from "@/components/ui/atoms/typography";
 import FormLogin from "@/components/ui/molecules/form-login";
 import Link from "next/link";

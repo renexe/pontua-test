@@ -43,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <span className={cn("flex items-center gap-[9px] font-epilogue", epilogue.variable)}>
           {props.children}
           <LoginAltIcon className="group-hover:translate-x-2 transition-transform duration-300" />
-          </span>
+        </span>
       </Comp>
     )
   }

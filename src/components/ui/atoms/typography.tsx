@@ -17,7 +17,7 @@ const typographyVariants = cva(
         h5: "",
         h6: "",
         body1: "",
-        body2: "text-xs",
+        body2: "text-[11px]",
         link: "font-bold tracking-wider hover:underline",
         // caption: "font-normal tracking-normal text-sm",
       },

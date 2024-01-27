@@ -21,7 +21,7 @@ const config = {
     },
     extend: {
       leading: {
-        "md": "22px",
+        md: "22px",
       },
       letterSpacing: {
         tighter: "-0.07em",
@@ -52,10 +52,10 @@ const config = {
         },
       },
       fontSize: {
-        "xl": "36px",
-        "md": "24px",
-        "sm": "16px",
-        "xs": "11px",
+        xl: "36px",
+        md: "24px",
+        sm: "16px",
+        xs: "14px",
       },
       borderRadius: {
         sm: "10px",
