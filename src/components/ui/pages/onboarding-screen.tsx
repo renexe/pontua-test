@@ -35,10 +35,10 @@ const OnboardingScreen = async () => {
           height={467}
           className="absolute bottom-0 left-0 md:relative md:ml-8 lg:ml-12  z-10"
         />
-        {/* <LoginTemplate /> */}
+        <LoginTemplate />
         {/* <RecoverPasswordTemplate /> */}
         {/* <RecoverPasswordConfirmTemplate /> */}
-        <AgentSelectionTemplate heroes={heroes.data.results} />
+        {/* <AgentSelectionTemplate heroes={heroes.data.results} /> */}
       </div>
     </div>
   )
