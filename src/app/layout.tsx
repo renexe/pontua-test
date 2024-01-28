@@ -25,7 +25,7 @@ export default function RootLayout({
         <meta name="description" content="Esse é um teste para vaga de trabalho como desenvolvedor frontend na equipe da Pontua." />
       </head>
       <body className={cn(
-        "min-h-screen bg-background font-sans antialiased",
+        "min-h-screen font-sans antialiased",
         inter.variable
       )}>
         {children}

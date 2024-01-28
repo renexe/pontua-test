@@ -15,7 +15,7 @@ const FormAgentSelection = ({ data }: { data: any }) => {
 
     if (result) {
       console.log(result)
-      router.push('/dashboard');
+      router.push('/dashboard/perfil/slug');
     }
   };
 
