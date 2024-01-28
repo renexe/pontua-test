@@ -3,7 +3,11 @@ import { Input } from "@/components/ui/atoms/input"
 import { Button } from "@/components/ui/atoms/button";
 import { useEffect, useRef, useState } from "react";
 
-const FormRecoverPassword = () => {
+export interface FormRecoverPasswordProps {
+  sendButtonCallback?: () => void
+}
+
+const FormRecoverPassword = ({ sendButtonCallback }: FormRecoverPasswordProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [buttonAvailable, setButtonAvailable] = useState(false);
 
@@ -17,7 +21,7 @@ const FormRecoverPassword = () => {
   }
 
   return (
-    <form>
+    <>
       <Input
         ref={inputRef}
         onChange={handleInputChange}
@@ -25,9 +29,17 @@ const FormRecoverPassword = () => {
         placeholder="Informe seu email"
         icon="email"
         className="mb-3"
+        required
       />
-      <Button className="w-full" disabled={!buttonAvailable} variant={buttonAvailable ? "default" : "disabled"}>enviar link</Button>
-    </form>
+      <Button
+        className="w-full"
+        disabled={!buttonAvailable}
+        variant={buttonAvailable ? "default" : "disabled"}
+        onClick={sendButtonCallback}
+      >
+        enviar link
+      </Button>
+    </>
   )
 }
 

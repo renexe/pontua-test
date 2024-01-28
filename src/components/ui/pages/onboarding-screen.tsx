@@ -1,8 +1,5 @@
 import Image from "next/image";
-import LoginTemplate from "@/components/ui/templates/login-template";
-import RecoverPasswordTemplate from "../templates/recover-password-template";
-import RecoverPasswordConfirmTemplate from "../templates/recover-password-confirm-template";
-import AgentSelectionTemplate from "../templates/agent-selection-template";
+import OnboardingTemplateController from "../templates/onboarding-template-controller";
 
 async function getHeroes() {
   const res = await fetch('https://gateway.marvel.com/v1/public/characters?ts=1&apikey=84d1bd4d3a025bf80b0d30ad747f85b8&hash=649c4fe1ca33ed38c47a7e08a732fa8a&limit=100&offset=20')
@@ -25,6 +22,7 @@ const OnboardingScreen = async () => {
         alt="logomarca da Pontua"
         width={169}
         height={50}
+        priority
       />
 
       <div className="flex justify-between items-end md:mt-[5vh]">
@@ -33,12 +31,11 @@ const OnboardingScreen = async () => {
           alt="imagem vetorizada de um prédio"
           width={614}
           height={467}
-          className="absolute bottom-0 left-0 md:relative md:ml-8 lg:ml-12  z-10"
+          priority
+          className="absolute bottom-0 left-0 md:relative md:ml-8 lg:ml-12 z-10"
         />
-        <LoginTemplate />
-        {/* <RecoverPasswordTemplate /> */}
-        {/* <RecoverPasswordConfirmTemplate /> */}
-        {/* <AgentSelectionTemplate heroes={heroes.data.results} /> */}
+
+        <OnboardingTemplateController heroes={heroes} />
       </div>
     </div>
   )

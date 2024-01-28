@@ -1,7 +1,11 @@
 import { Modal, ModalContent, ModalDescription, ModalTitle } from "@/components/ui/organisms/modal";
 import { Button } from "../atoms/button";
 
-const RecoverPasswordConfirmTemplate = () => {
+export interface RecoverPasswordConfirmTemplateProps {
+  backToLoginCallback?: () => void
+}
+
+const RecoverPasswordConfirmTemplate = ({ backToLoginCallback }: RecoverPasswordConfirmTemplateProps) => {
   return (
     <Modal>
       <ModalTitle className="mb-7">
@@ -11,7 +15,7 @@ const RecoverPasswordConfirmTemplate = () => {
         Foi enviado um e-mail para você com instruções de como redefinir a sua senha.
       </ModalDescription>
       <ModalContent>
-        <Button className="w-full">voltar para o login</Button>
+        <Button className="w-full" onClick={backToLoginCallback}>voltar para o login</Button>
       </ModalContent>
     </Modal>
   )

@@ -1,10 +1,14 @@
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalTitle } from "@/components/ui/organisms/modal";
 import { Typography } from "@/components/ui/atoms/typography";
 import FormLogin from "@/components/ui/molecules/form-login";
-import Link from "next/link";
 import ShieldIcon from "@/components/ui/atoms/icons/shield-icon";
 
-const LoginTemplate = () => {
+export interface LoginTemplateProps {
+  recoverPasswordCallback: () => void
+  successfullLoginCallback: () => void
+}
+
+const LoginTemplate = ({ recoverPasswordCallback, successfullLoginCallback }: LoginTemplateProps) => {
   return (
     <Modal>
       <ModalTitle>
@@ -14,14 +18,17 @@ const LoginTemplate = () => {
         informe as suas credenciais de acesso ao portal
       </ModalDescription>
       <ModalContent>
-        <FormLogin />
+        <FormLogin successfullLoginCallback={successfullLoginCallback} />
       </ModalContent>
       <ModalFooter>
-        <Link href="/forgot-password" className="hover:underline underline-offset-2">
-          <Typography color="orange" variant="body2" className="w-full flex justify-end gap-1 mt-5">
-            <ShieldIcon /> Esqueceu sua senha?
-          </Typography>
-        </Link>
+        <Typography
+          color="orange"
+          variant="body2"
+          className="w-full flex justify-end gap-1 mt-5 hover:underline underline-offset-2 cursor-pointer"
+          onClick={recoverPasswordCallback}
+        >
+          <ShieldIcon /> Esqueceu sua senha?
+        </Typography>
       </ModalFooter>
     </Modal>
   )

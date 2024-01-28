@@ -1,11 +1,27 @@
+"use client";
+import { FormEventHandler } from "react";
 import { Button } from "@/components/ui/atoms/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../atoms/select";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 const FormAgentSelection = ({ data }: { data: any }) => {
+  const router = useRouter();
+
+  const handleSubmit = (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const result = formData.get('agent-select');
+
+    if (result) {
+      console.log(result)
+      router.push('/dashboard');
+    }
+  };
+
   return (
-    <form>
-      <Select>
+    <form onSubmit={handleSubmit as unknown as FormEventHandler<HTMLFormElement>}>
+      <Select name="agent-select" required>
         <SelectTrigger>
           <SelectValue placeholder="Selecione um agente" />
         </SelectTrigger>

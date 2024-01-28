@@ -1,7 +1,11 @@
 import { Modal, ModalContent, ModalDescription, ModalTitle } from "@/components/ui/organisms/modal";
 import FormRecoverPassword from "../molecules/form-recover-password";
 
-const RecoverPasswordTemplate = () => {
+export interface RecoverPasswordTemplateProps {
+  recoverPasswordCallback?: () => void
+}
+
+const RecoverPasswordTemplate = ({ recoverPasswordCallback }: RecoverPasswordTemplateProps) => {
   return (
     <Modal>
       <ModalTitle className="mb-7">
@@ -14,7 +18,7 @@ const RecoverPasswordTemplate = () => {
         a sua senha.
       </ModalDescription>
       <ModalContent>
-        <FormRecoverPassword />
+        <FormRecoverPassword sendButtonCallback={recoverPasswordCallback} />
       </ModalContent>
     </Modal>
   )
