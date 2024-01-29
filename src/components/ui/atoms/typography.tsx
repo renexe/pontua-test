@@ -16,8 +16,9 @@ const typographyVariants = cva(
         h4: "",
         h5: "",
         h6: "",
-        body1: "",
+        body1: "text-[13px]",
         body2: "text-[11px]",
+        menu: "text-[13px] font-medium leading-3",
         link: "font-bold tracking-wider hover:underline",
         // caption: "font-normal tracking-normal text-sm",
       },
@@ -74,7 +75,8 @@ function determineComp(variant: string | undefined | null) {
     body1: "p",
     body2: "p",
     link: "p",
-    caption: "span"
+    caption: "span",
+    menu: "p"
   };
 
   if (variant) {
