@@ -25,3 +25,8 @@ export async function signIn(formData: FormData) {
   }
   return false;
 }
+
+export async function signOut() {
+  cookies().delete("session");
+  redirect("/");
+}

@@ -6,6 +6,9 @@ import DashboardIcon from "../atoms/icons/dashboard-icon"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils";
+import BackArrowIcon from "../atoms/icons/back-arrow-icon";
+import { Button } from "../atoms/button";
+import { signOut } from "@/lib/actions";
 
 const SideBar = () => {
   const pathname = usePathname()
@@ -41,6 +44,18 @@ const SideBar = () => {
             Perfil
           </Typography>
         </Link>
+      </div>
+
+      <div className="w-full py-5 pl-6">
+        <button onClick={async () => {await signOut()}} className="flex gap-4 items-center group">
+          <BackArrowIcon stroke="var(--blue-800)" />
+          <Typography
+            variant="menu"
+            className={cn("group-hover:translate-x-2 transition-transform")}
+          >
+            Sair
+          </Typography>
+        </button>
       </div>
     </div>
   )
