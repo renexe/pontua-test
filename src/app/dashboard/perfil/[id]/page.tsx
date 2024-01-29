@@ -11,13 +11,10 @@ async function getHero({ id }: { id: string }) {
   return res.json()
 }
 
-
 export default async function AgentProfile({ params }: { params: { id: string } }) {
   const { id } = params
   const { data } = await getHero({ id })
   const hero = data.results[0]
-  console.log(data)
-
 
   return (
     <section className="pl-9 mt-20 pt-6 border-t border-gray-50 w-full">
@@ -28,7 +25,7 @@ export default async function AgentProfile({ params }: { params: { id: string } 
           {hero.name}
         </span>
       </Typography>
-      <ProfileMenu />
+      <ProfileMenu hero={hero} />
     </section>
   );
 }
