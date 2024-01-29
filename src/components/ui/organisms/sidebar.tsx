@@ -7,15 +7,15 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils";
 import BackArrowIcon from "../atoms/icons/back-arrow-icon";
-import { Button } from "../atoms/button";
+
 import { signOut } from "@/lib/actions";
 
 const SideBar = () => {
   const pathname = usePathname()
-  console.log(pathname)
+
   return (
     <div className="w-[256px] h-screen shadow-xl">
-      <div className="w-full py-5 pl-6 border-b border-gray-50">
+      <div className="w-full py-5 pl-6 border-b border-gray-50 h-20">
         <Image
           src="/assets/images/logo_pontua_blue.svg"
           alt="logomarca da Pontua"
