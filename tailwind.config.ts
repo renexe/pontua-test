@@ -55,6 +55,7 @@ const config = {
           "500": "var(--orange-500)",
         },
         gray: {
+          "50": "var(--gray-50)",
           "100": "var(--gray-100)",
           "400": "var(--gray-400)",
           "500": "var(--gray-500)",
