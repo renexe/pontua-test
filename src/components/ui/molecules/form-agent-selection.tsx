@@ -1,5 +1,5 @@
 "use client";
-import { FormEventHandler } from "react";
+import { FormEventHandler, useState } from "react";
 import { Button } from "@/components/ui/atoms/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../atoms/select";
 import Image from "next/image";
@@ -11,11 +11,11 @@ const FormAgentSelection = ({ data }: { data: any }) => {
   const handleSubmit = (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const result = formData.get('agent-select');
+    const heroName = formData.get('agent-select');
+    const heroId = data.find((item: any) => item.name === heroName)?.id;
 
-    if (result) {
-      console.log(result)
-      router.push('/dashboard/perfil/slug');
+    if (heroId) {
+      router.push(`/dashboard/perfil/${heroId}`);
     }
   };
 
