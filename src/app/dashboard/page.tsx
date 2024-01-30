@@ -52,7 +52,7 @@ export default async function DashboardHome() {
           <div key={hero.id} className={cn(index >= pages[0].length - 2 ? "col-span-1 sm:col-span-2" : "col-span-1")}>
             <Link
               href={`/dashboard/perfil/${hero.id}`}
-              className="w-full h-[150px] bg-gray-200 rounded-xl flex p-3 gap-4"
+              className="w-full h-[150px] bg-gray-200 rounded-xl flex p-3 gap-4 shadow-md hover:scale-95 transition-transform hover:border hover:border-gray-400"
             >
               <div className="relative w-[80px] h-full">
                 <Image
