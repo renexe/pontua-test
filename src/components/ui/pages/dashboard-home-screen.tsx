@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import AmplifyIcon from "@/components/ui/atoms/icons/amplify";
 import Image from "next/image";
 import Link from "next/link";
+import SkeletonGrid from "../organisms/skeleton-grid";
 
 
 export interface DashboardHomeScreenProps {
@@ -52,9 +53,9 @@ const DashboardHomeScreen = ({ heroes }: DashboardHomeScreenProps) => {
         <AmplifyIcon />
         <Input placeholder="Busque um agente" value={search} onChange={(e) => handleSearch(e.target)} className="min-w-[70vw] h-full border-none focus-visible:ring-0" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 mt-5 mx-9">
-        {pages.length > 0 &&
-          pages[currentPage].map((hero: any, index: number) => (
+      {pages.length > 0 ?
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 mt-5 mx-9">
+          {pages[currentPage].map((hero: any, index: number) => (
             <div key={hero.id} className={cn(index >= 8 ? "col-span-1 sm:col-span-2" : "col-span-1")}>
               <Link
                 href={`/dashboard/perfil/${hero.id}`}
@@ -76,7 +77,8 @@ const DashboardHomeScreen = ({ heroes }: DashboardHomeScreenProps) => {
               </Link>
             </div>
           ))}
-      </div>
+        </div>
+        : <SkeletonGrid />}
     </>
   );
 }
