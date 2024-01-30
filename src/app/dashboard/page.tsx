@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/atoms/input";
 import { Typography } from "@/components/ui/atoms/typography";
 import ProfileMenu from "@/components/ui/molecules/profile-menu";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 async function getHeroes() {
   const res = await fetch('https://gateway.marvel.com/v1/public/characters?ts=1&apikey=84d1bd4d3a025bf80b0d30ad747f85b8&hash=649c4fe1ca33ed38c47a7e08a732fa8a&limit=100')
@@ -35,10 +36,21 @@ export default async function DashboardHome() {
       </div>
       <div className="grid grid-cols-4 gap-2 mt-5 mx-9">
         {pages[0].map((hero: any, index: number) => (
-            <div key={hero.id} className={cn(index >= pages[0].length - 2 ? "col-span-2" : "col-span-1")}>
-            <div className="w-full h-[150px] bg-gray-200 rounded-2xl flex items-center p-3">
-              <img src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} alt={hero.name} className="w-[100px] h-[100px]" />
-              <Typography className="text-center">{hero.name}</Typography>
+          <div key={hero.id} className={cn(index >= pages[0].length - 2 ? "col-span-2" : "col-span-1")}>
+            <div className="w-full h-[150px] bg-gray-200 rounded-xl flex p-3 gap-4">
+              <div className="relative w-[80px] h-full">
+                <Image
+                  src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
+                  alt={hero.name}
+                  sizes="99vw"
+                  fill
+                  className="rounded-2xl object-cover"
+                />
+              </div>
+              <div className="flex flex-col flex-1">
+                <Typography variant="h5">{hero.name}</Typography>
+                <Typography className="text-ellipsis bg-red-300 h-fit">{hero.description ? hero.description : "Descrição não fornecida."}</Typography>
+              </div>
             </div>
           </div>
         ))}
