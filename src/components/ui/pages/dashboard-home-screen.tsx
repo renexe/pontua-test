@@ -15,7 +15,6 @@ export interface DashboardHomeScreenProps {
 
 const DashboardHomeScreen = ({ heroes }: DashboardHomeScreenProps) => {
   const [search, setSearch] = useState("");
-  const [currentHeroes, setCurrentHeroes] = useState(heroes);
   const [pages, setPages] = useState<any[][]>([]);
   const [currentPage, setCurrentPage] = useState(0);
 
