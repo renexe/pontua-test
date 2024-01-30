@@ -47,9 +47,9 @@ export default async function DashboardHome() {
         <AmplifyIcon />
         <Input placeholder="Busque um agente" className="min-w-[70vw] h-full border-none focus-visible:ring-0" />
       </div>
-      <div className="grid grid-cols-4 gap-2 mt-5 mx-9">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 mt-5 mx-9">
         {pages[0].map((hero: any, index: number) => (
-          <div key={hero.id} className={cn(index >= pages[0].length - 2 ? "col-span-2" : "col-span-1")}>
+          <div key={hero.id} className={cn(index >= pages[0].length - 2 ? "col-span-1 sm:col-span-2" : "col-span-1")}>
             <Link
               href={`/dashboard/perfil/${hero.id}`}
               className="w-full h-[150px] bg-gray-200 rounded-xl flex p-3 gap-4"

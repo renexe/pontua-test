@@ -14,7 +14,7 @@ const SideBar = () => {
   const pathname = usePathname()
 
   return (
-    <div className="w-[256px] h-screen shadow-xl">
+    <div className="w-[256px] h-screen shadow-xl hidden sm:block">
       <div className="w-full py-5 pl-6 border-b border-gray-50 h-16">
         <Image
           src="/assets/images/logo_pontua_blue.svg"
