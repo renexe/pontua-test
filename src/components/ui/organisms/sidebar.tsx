@@ -35,7 +35,7 @@ const SideBar = () => {
             Home
           </Typography>
         </Link>
-        <Link href="/dashboard/perfil/slug" className="flex gap-4 items-center group">
+        <Link href="/" className="flex gap-4 items-center group">
           <ProfileIcon stroke={pathname === "/dashboard/perfil/slug" ? "var(--orange-500)" : "var(--blue-800)"} />
           <Typography
             variant="menu"
