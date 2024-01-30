@@ -15,7 +15,7 @@ const SideBar = () => {
 
   return (
     <div className="w-[256px] h-screen shadow-xl">
-      <div className="w-full py-5 pl-6 border-b border-gray-50 h-20">
+      <div className="w-full py-5 pl-6 border-b border-gray-50 h-14">
         <Image
           src="/assets/images/logo_pontua_blue.svg"
           alt="logomarca da Pontua"
