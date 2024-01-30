@@ -28,6 +28,18 @@ export default async function DashboardHome() {
 
   console.log(pages);
 
+  const descriptionFactory = (description: string) => {
+    if (description === "") {
+      return "Sem descrição";
+    }
+
+    if (description.length > 100) {
+      return `${description.slice(0, 100)}...`;
+    }
+
+    return description;
+  }
+
   return (
     <section className="w-full">
       <div className="flex w-full h-14 items-center overflow-hidden pl-9 border-b border-gray-50">
@@ -47,9 +59,9 @@ export default async function DashboardHome() {
                   className="rounded-2xl object-cover"
                 />
               </div>
-              <div className="flex flex-col flex-1">
+              <div className="flex flex-col flex-1 h-full overflow-hidden">
                 <Typography variant="h5">{hero.name}</Typography>
-                <Typography className="text-ellipsis bg-red-300 h-fit">{hero.description ? hero.description : "Descrição não fornecida."}</Typography>
+                <Typography className="mt-2">{descriptionFactory(hero.description)}</Typography>
               </div>
             </div>
           </div>
