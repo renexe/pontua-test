@@ -36,10 +36,10 @@ const SideBar = () => {
           </Typography>
         </Link>
         <Link href="/" className="flex gap-4 items-center group">
-          <ProfileIcon stroke={pathname === "/dashboard/perfil/slug" ? "var(--orange-500)" : "var(--blue-800)"} />
+          <ProfileIcon stroke={pathname.includes("/perfil/") ? "var(--orange-500)" : "var(--blue-800)"} />
           <Typography
             variant="menu"
-            className={cn("group-hover:translate-x-2 transition-transform", pathname === "/dashboard/perfil/slug" && "text-orange-500")}
+            className={cn("group-hover:translate-x-2 transition-transform", pathname.includes("/perfil/") && "text-orange-500")}
           >
             Perfil
           </Typography>
