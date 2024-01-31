@@ -1,5 +1,6 @@
 import Image from "next/image";
 import OnboardingTemplateController from "../templates/onboarding-template-controller";
+import Logo from "../atoms/logo";
 
 async function getHeroes() {
   const res = await fetch('https://gateway.marvel.com/v1/public/characters?ts=1&apikey=84d1bd4d3a025bf80b0d30ad747f85b8&hash=649c4fe1ca33ed38c47a7e08a732fa8a&limit=100')
@@ -17,13 +18,7 @@ const OnboardingScreen = async () => {
   
   return (
     <div className="container mx-auto flex flex-col justify-between pt-4 md:pt-[10vh]">
-      <Image
-        src="/assets/images/logo_pontua_white.svg"
-        alt="logomarca da Pontua"
-        width={169}
-        height={50}
-        priority
-      />
+      <Logo />
 
       <div className="flex justify-between items-end md:mt-[5vh]">
         <Image
