@@ -22,7 +22,7 @@ const OnboardingTemplateController = ({ heroes }: { heroes: any }) => {
     agentSelection: <AgentSelectionTemplate heroes={heroes.data.results} />
   }
 
-  const verifySessionCookkie = () => {
+  const verifySessionCookie = () => {
     const session = document.cookie.match(/session=[^;]+/)
 
     if (session) {
@@ -33,7 +33,7 @@ const OnboardingTemplateController = ({ heroes }: { heroes: any }) => {
   }
 
   useEffect(() => {
-    verifySessionCookkie()
+    verifySessionCookie()
   }, [])
 
   return currentTemplate
