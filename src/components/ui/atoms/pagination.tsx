@@ -1,7 +1,7 @@
 import * as React from "react"
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons"
 
@@ -24,7 +24,7 @@ const PaginationContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
-    className={cn("flex flex-row items-center gap-1", className)}
+    className={cn("flex flex-row items-center border border-gray-100 rounded-lg", className)}
     {...props}
   />
 ))
@@ -34,7 +34,7 @@ const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
 >(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} />
+  <li ref={ref} className={cn("text-xs text-blue-600", className)} {...props} />
 ))
 PaginationItem.displayName = "PaginationItem"
 
@@ -52,8 +52,11 @@ const PaginationLink = ({
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
+      "border-x border-gray-100 !rounded-none",
+      isActive && "bg-gray-200",
       buttonVariants({
-        variant: isActive ? "outline" : "ghost",
+        // variant: isActive ? "outline" : "ghost",
+        variant: "ghost",
         size,
       }),
       className
@@ -68,13 +71,13 @@ const PaginationPrevious = ({
   ...props
 }: React.ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
-    aria-label="Go to previous page"
+    aria-label="Vá para a página anterior"
     size="default"
     className={cn("gap-1 pl-2.5", className)}
     {...props}
   >
-    <ChevronLeftIcon className="h-4 w-4" />
-    <span>Previous</span>
+    <ArrowLeftIcon className="h-4 w-4" />
+    <span className="text-xs">Anterior</span>
   </PaginationLink>
 )
 PaginationPrevious.displayName = "PaginationPrevious"
@@ -84,13 +87,13 @@ const PaginationNext = ({
   ...props
 }: React.ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
-    aria-label="Go to next page"
+    aria-label="Vá para a próxima página"
     size="default"
     className={cn("gap-1 pr-2.5", className)}
     {...props}
   >
-    <span>Next</span>
-    <ChevronRightIcon className="h-4 w-4" />
+    <span className="text-xs">Próxima</span>
+    <ArrowRightIcon className="h-4 w-4" />
   </PaginationLink>
 )
 PaginationNext.displayName = "PaginationNext"

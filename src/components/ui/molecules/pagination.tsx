@@ -60,7 +60,7 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
             ) : index === 4 ? (
               <div className="relative flex flex-col justify-end items-center">
                 <PaginationEllipsis />
-                {page > 2 && page < 7 ? page + 1 : ''}
+                <span className="absolute right-2/4 translate-x-[50%] -top-1 text-xs font-medium">{page > 2 && page < 7 ? page + 1 : ''}</span>
               </div>
             ) : ''}
           </PaginationItem>
