@@ -15,7 +15,7 @@ const RecoverPasswordConfirmTemplate = ({ backToLoginCallback }: RecoverPassword
         Foi enviado um e-mail para você com instruções de como redefinir a sua senha.
       </ModalDescription>
       <ModalContent>
-        <Button className="w-full" onClick={backToLoginCallback}>voltar para o login</Button>
+        <Button size="lg" className="w-full" onClick={backToLoginCallback}>voltar para o login</Button>
       </ModalContent>
     </Modal>
   )

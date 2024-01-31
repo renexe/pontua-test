@@ -36,6 +36,7 @@ const FormRecoverPassword = ({ sendButtonCallback }: FormRecoverPasswordProps) =
         disabled={!buttonAvailable}
         variant={buttonAvailable ? "default" : "disabled"}
         onClick={sendButtonCallback}
+        size="lg"
       >
         enviar link
       </Button>

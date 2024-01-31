@@ -42,7 +42,7 @@ const FormAgentSelection = ({ data }: { data: any }) => {
           ))}
         </SelectContent>
       </Select>
-      <Button className="w-full mt-4">entrar</Button>
+      <Button size="lg" className="w-full mt-4">entrar</Button>
     </form>
   )
 }

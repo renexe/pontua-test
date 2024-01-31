@@ -38,7 +38,7 @@ const FormLogin = ({ successfullLoginCallback }: FormLoginProps) => {
         icon="password"
         className="mt-[23px] mb-[11px]"
       />
-      <Button className="w-full" type="submit">entrar</Button>
+      <Button size="lg" className="w-full" type="submit">entrar</Button>
     </form>
   )
 }
