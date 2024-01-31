@@ -24,8 +24,6 @@ const ProfileMenu = ({ hero }: ProfileMenuProps) => {
     setCurrentMenu(menu)
   }
 
-  console.log(hero)
-
   const splitChunks = (array: any[], size: number) => {
     const chunks = [];
     for (let i = 0; i < array.length; i += size) {
