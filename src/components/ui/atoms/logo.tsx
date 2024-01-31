@@ -1,15 +1,22 @@
 'use client';
+import { cn } from '@/lib/utils';
 import { animated, useSpring } from '@react-spring/web'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-const Logo = () => {
+export interface LogoProps {
+  imgSrc: string;
+  imgWidth: number;
+  imgHeight: number;
+  revealBgColor?: 'bg-blue-800' | 'bg-white'
+}
+
+const Logo = ({ imgSrc, imgWidth, imgHeight, revealBgColor = 'bg-blue-800' }: LogoProps) => {
   const [key, setKey] = useState(0);
 
   const springs = useSpring({
     from: { x: 0 },
     to: { x: 200 },
-    duration: 2000,
     delay: 0,
     key: key,
   })
@@ -19,16 +26,16 @@ const Logo = () => {
   }, [])
 
   return (
-    <div className='relative w-fit'>
+    <div className='relative w-fit overflow-hidden'>
       <animated.div
         style={{ ...springs }}
-        className="absolute top-0 left-0 w-full h-full bg-blue-800 duration-1000 transition-all"
+        className={cn("absolute top-0 left-0 w-full h-full duration-300 transition-all ease-linear", revealBgColor)}
       />
       <Image
-        src="/assets/images/logo_pontua_white.svg"
+        src={imgSrc}
         alt="logomarca da Pontua"
-        width={169}
-        height={50}
+        width={imgWidth}
+        height={imgHeight}
         priority
       />
     </div>

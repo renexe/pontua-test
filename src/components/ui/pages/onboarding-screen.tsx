@@ -18,7 +18,7 @@ const OnboardingScreen = async () => {
   
   return (
     <div className="container mx-auto flex flex-col justify-between pt-4 md:pt-[10vh]">
-      <Logo />
+      <Logo imgSrc="/assets/images/logo_pontua_white.svg" imgWidth={169} imgHeight={50} />
 
       <div className="flex justify-between items-end md:mt-[5vh]">
         <Image
