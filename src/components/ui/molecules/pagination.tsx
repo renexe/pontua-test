@@ -8,6 +8,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/atoms/pagination";
 import { Typography } from "../atoms/typography";
+import { cn } from "@/lib/utils";
 
 export interface PaginatorProps {
   page: number;
@@ -24,7 +25,7 @@ const handlePreviousNavigation = ({ index }: { index: number }) => {
 }
 
 const handleNextNavigation = ({ index, totalPages }: { index: number, totalPages: number }) => {
-  if (index === totalPages) {
+  if (index + 1 === totalPages) {
     return index;
   }
 
@@ -36,9 +37,15 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
     <PaginationComponent>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious href="#" onClick={() => onPageChange(
-            handlePreviousNavigation({ index: page })
-          )} />
+          <PaginationPrevious
+            href="#"
+            className={
+              cn(page === 0 && "pointer-events-none text-gray-300")
+            }
+            onClick={() => onPageChange(
+              handlePreviousNavigation({ index: page })
+            )}
+          />
         </PaginationItem>
         {Array.from({ length: totalPages }, (_, index) => (
           <PaginationItem key={index}>
@@ -59,9 +66,15 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
           </PaginationItem>
         ))}
         <PaginationItem>
-          <PaginationNext href="#" onClick={() => onPageChange(
-            handleNextNavigation({ index: page, totalPages })
-          )} />
+          <PaginationNext
+            href="#"
+            className={
+              cn(page + 1 === totalPages && "pointer-events-none text-gray-300")
+            }
+            onClick={() => onPageChange(
+              handleNextNavigation({ index: page, totalPages })
+            )}
+          />
         </PaginationItem>
       </PaginationContent>
     </PaginationComponent>
