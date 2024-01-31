@@ -7,6 +7,7 @@ import AmplifyIcon from "@/components/ui/atoms/icons/amplify";
 import Image from "next/image";
 import Link from "next/link";
 import SkeletonGrid from "../organisms/skeleton-grid";
+import Pagination from "../molecules/pagination";
 
 
 export interface DashboardHomeScreenProps {
@@ -78,6 +79,15 @@ const DashboardHomeScreen = ({ heroes }: DashboardHomeScreenProps) => {
           ))}
         </div>
         : <SkeletonGrid />}
+      <div className="flex justify-center h-[68px] border-t border-gray-50 mt-8 mx-9">
+        <div className="flex items-center justify-center w-full h-full">
+          <Pagination
+            page={currentPage}
+            totalPages={10}
+            onPageChange={(page: number) => setCurrentPage(page)}
+          />
+        </div>
+      </div>
     </>
   );
 }

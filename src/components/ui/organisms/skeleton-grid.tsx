@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from "@/components/ui/atoms/skeleton"
 import { cn } from "@/lib/utils";
 
 const SkeletonGrid = () => {

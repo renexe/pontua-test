@@ -24,7 +24,7 @@ const ProfileMenu = ({ hero }: ProfileMenuProps) => {
   const handleMenuClick = (menu: string) => {
     setCurrentMenu(menu)
   }
-  console.log(hero)
+
   return (
     <>
       <nav>
@@ -43,13 +43,15 @@ const ProfileMenu = ({ hero }: ProfileMenuProps) => {
         </ul>
       </nav>
       <div className="mt-7 rounded-2xl py-10 px-8 mr-14 shadow-lg flex gap-7">
-        <Image
-          src={hero.thumbnail.path + '.' + hero.thumbnail.extension}
-          alt=""
-          width={120}
-          height={90}
-          className="rounded-full max-h-[120px]"
-        />
+        <div className="relative h-[90px] w-[90px] md:h-[120px] md:w-[120px] rounded-full overflow-hidden">
+          <Image
+            src={hero.thumbnail.path + '.' + hero.thumbnail.extension}
+            alt=""
+            fill
+            sizes="99vw"
+            className="cover-image"
+          />
+        </div>
         <div>
           <Typography variant="h3" className="text-blue-600">{hero.name}</Typography>
           <Typography className="text-gray-500 text-sm font-semibold mt-4">{hero.description ? hero.description : 'Descrição não fornecida.'}</Typography>
