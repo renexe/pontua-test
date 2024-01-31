@@ -3,7 +3,8 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
-import { epilogue } from "@/app/layout"
+import { epilogue } from "./typography"
+
 
 const buttonVariants = cva(
   "group inline-flex items-center justify-center whitespace-nowrap rounded-xl text-md font-bold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-orange-500 disabled:pointer-events-none disabled:opacity-50",
@@ -12,8 +13,8 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-blue-600 text-white hover:bg-blue-800",
-          disabled: "bg-gray-400 text-white",
-          ghost: "hover:bg-accent hover:text-accent-foreground text-sm font-medium",
+        disabled: "bg-gray-400 text-white",
+        ghost: "hover:bg-accent hover:text-accent-foreground text-sm font-medium",
       },
       size: {
         default: "h-9 px-4 py-2",
