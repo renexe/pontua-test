@@ -48,7 +48,7 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
           />
         </PaginationItem>
         {Array.from({ length: totalPages }, (_, index) => (
-          <PaginationItem key={index}>
+          <PaginationItem key={index} className="hidden md:block">
             {index < 3 || index > 6 ? (
               <PaginationLink
                 isActive={index === page}
@@ -76,7 +76,7 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
             )}
           />
         </PaginationItem>
-      </PaginationContent>
+      </PaginationContent >
     </PaginationComponent>
   )
 }
