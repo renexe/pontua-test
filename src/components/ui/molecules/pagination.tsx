@@ -40,7 +40,7 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
           <PaginationPrevious
             href="#"
             className={
-              cn(page === 0 && "pointer-events-none text-gray-300")
+              cn("hover:bg-gray-50", page === 0 && "pointer-events-none text-gray-300")
             }
             onClick={() => onPageChange(
               handlePreviousNavigation({ index: page })
@@ -48,7 +48,7 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
           />
         </PaginationItem>
         {Array.from({ length: totalPages }, (_, index) => (
-          <PaginationItem key={index} className="hidden md:block">
+          <PaginationItem key={index} className="hidden md:block hover:bg-gray-50">
             {index < 3 || index > 6 ? (
               <PaginationLink
                 isActive={index === page}
@@ -69,7 +69,7 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginatorProps) => {
           <PaginationNext
             href="#"
             className={
-              cn(page + 1 === totalPages && "pointer-events-none text-gray-300")
+              cn("hover:bg-gray-50", page + 1 === totalPages && "pointer-events-none text-gray-300")
             }
             onClick={() => onPageChange(
               handleNextNavigation({ index: page, totalPages })
