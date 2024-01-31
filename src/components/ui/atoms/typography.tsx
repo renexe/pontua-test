@@ -3,7 +3,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { Slot } from "@radix-ui/react-slot";
 
 import { cn } from "@/lib/utils";
-import { epilogue, inter } from "@/app/layout";
+import { Inter } from "next/font/google";
+import { Epilogue } from "next/font/google";
+
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
+
+export const epilogue = Epilogue({
+  subsets: ["latin"],
+  variable: "--font-epilogue",
+})
 
 const typographyVariants = cva(
   "text-sm font-normal tracking-tighter leading-5",
