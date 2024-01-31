@@ -58,7 +58,7 @@ const ProfileMenu = ({ hero }: ProfileMenuProps) => {
         const splitedComics = splitChunks(hero.comics.items, 10)
 
         return (
-          <div className="flex flex-wrap gap-12">
+          <div className="flex flex-wrap md:gap-12">
             {splitedComics.map((chunk, index) => (
               <ul key={index} className="list-disc max-h-[80%] mr-4">
                 {chunk.map((comic: any) => (
@@ -74,7 +74,7 @@ const ProfileMenu = ({ hero }: ProfileMenuProps) => {
         const splitedSeries = splitChunks(hero.series.items, 10)
         
         return (
-          <div className="flex flex-wrap gap-12">
+          <div className="flex flex-wrap md:gap-12">
             {splitedSeries.map((chunk, index) => (
               <ul key={index} className="list-disc max-h-[80%] mr-4">
                 {chunk.map((serie: any) => (
@@ -90,7 +90,7 @@ const ProfileMenu = ({ hero }: ProfileMenuProps) => {
         const splitedStories = splitChunks(hero.stories.items, 10)
 
         return (
-          <div className="flex flex-wrap gap-12">
+          <div className="flex flex-wrap md:gap-12">
             {splitedStories.map((chunk, index) => (
               <ul key={index} className="list-disc max-h-[80%] mr-4">
                 {chunk.map((story: any) => (

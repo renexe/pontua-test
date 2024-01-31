@@ -78,16 +78,18 @@ const DashboardHomeScreen = ({ heroes }: DashboardHomeScreenProps) => {
             </div>
           ))}
         </div>
-        : <SkeletonGrid />}
-      <div className="flex justify-center h-[68px] border-t border-gray-50 mt-8 mx-9">
-        <div className="flex items-center justify-center w-full h-full">
-          <Pagination
-            page={currentPage}
-            totalPages={10}
-            onPageChange={(page: number) => setCurrentPage(page)}
-          />
+        : search.length <= 0 ? <SkeletonGrid /> : <Typography className="text-center mt-8">Nenhum agente encontrado</Typography>}
+      {search.length === 0 && (
+        <div className="flex justify-center h-[68px] border-t border-gray-50 mt-8 mx-9">
+          <div className="flex items-center justify-center w-full h-full">
+            <Pagination
+              page={currentPage}
+              totalPages={10}
+              onPageChange={(page: number) => setCurrentPage(page)}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
