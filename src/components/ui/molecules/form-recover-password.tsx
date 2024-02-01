@@ -28,11 +28,11 @@ const FormRecoverPassword = ({ sendButtonCallback }: FormRecoverPasswordProps) =
         type="email"
         placeholder="Informe seu email"
         icon="email"
-        className="mb-3"
+        
         required
       />
       <Button
-        className="w-full"
+        className="w-full mt-3"
         disabled={!buttonAvailable}
         variant={buttonAvailable ? "default" : "disabled"}
         onClick={sendButtonCallback}
