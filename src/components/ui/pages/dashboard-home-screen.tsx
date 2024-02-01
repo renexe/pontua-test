@@ -49,7 +49,7 @@ const DashboardHomeScreen = ({ heroes }: DashboardHomeScreenProps) => {
 
   return (
     <>
-      <div className="flex w-full h-16 items-center overflow-hidden pl-9 border-b border-gray-50">
+      <div className="flex w-full h-16 mt-16 sm:mt-0 items-center overflow-hidden pl-9 border-b border-gray-50">
         <AmplifyIcon />
         <Input placeholder="Busque um agente" value={search} onChange={(e) => handleSearch(e.target)} className="min-w-[70vw] h-full border-none focus-visible:ring-0" />
       </div>
