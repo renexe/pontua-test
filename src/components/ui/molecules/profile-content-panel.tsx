@@ -2,7 +2,7 @@ import { Typography } from "../atoms/typography";
 
 const ProfileContentPanel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="mt-7 rounded-2xl py-10 px-8 mr-14 shadow-lg flex gap-7">
+    <div className="mt-7 rounded-2xl py-10 px-6 sm:px-8 mr-8 sm:mr-14 shadow-lg flex sm:flex-row flex-col gap-7">
       {children}
     </div>
   );

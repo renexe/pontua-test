@@ -53,7 +53,7 @@ const ProfileContent = ({ hero }: ProfileContentProps) => {
         <ProfileContentPanel>
           {currentMenu === "Visão Geral" ? (
             <>
-              <div className="relative h-[90px] w-[90px] md:h-[120px] md:w-[120px] rounded-full overflow-hidden">
+              <div className="relative h-[33vw] w-[33vw] sm:h-[90px] sm:w-[90px] md:h-[120px] md:w-[120px] rounded-full overflow-hidden">
                 <Image
                   src={hero.thumbnail.path + '.' + hero.thumbnail.extension}
                   alt=""
