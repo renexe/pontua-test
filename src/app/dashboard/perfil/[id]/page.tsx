@@ -17,7 +17,7 @@ export default async function AgentProfile({ params }: { params: { id: string } 
   const hero = data.results[0]
 
   return (
-    <section className="pl-9 mt-14 pt-6 border-t border-gray-50 w-full">
+    <section className="pl-9 mt-16 pt-6 border-t border-gray-50 w-full">
       <Typography variant="h3">
         Perfil
         <span className="text-orange-500"> / </span>

@@ -13,8 +13,8 @@ const DashboardMenuNav = () => {
 
   return (
     <nav className="flex justify-between sm:block w-full px-8">
-      <div className="w-full py-5 border-b border-gray-50 flex sm:flex-col gap-6">
-        <Link href="/dashboard" className="flex gap-4 items-center group">
+      <div className="w-full py-5 border-b border-gray-50 flex sm:flex-col gap-12 sm:gap-6">
+        <Link href="/dashboard" className="flex gap-2 sm:gap-4 items-center group">
           <DashboardIcon stroke={pathname === "/dashboard" ? "var(--orange-500)" : "var(--blue-800)"} />
           <Typography
             variant="menu"
@@ -23,7 +23,7 @@ const DashboardMenuNav = () => {
             Home
           </Typography>
         </Link>
-        <Link href="/" className="flex gap-4 items-center group">
+        <Link href="/" className="flex gap-2 sm:gap-4 items-center group">
           <ProfileIcon stroke={pathname.includes("/perfil/") ? "var(--orange-500)" : "var(--blue-800)"} />
           <Typography
             variant="menu"
@@ -34,7 +34,7 @@ const DashboardMenuNav = () => {
         </Link>
       </div>
       <div className="w-full py-5 flex justify-end sm:block">
-        <button onClick={async () => { await signOut() }} className="flex gap-4 items-center group">
+        <button onClick={async () => { await signOut() }} className="flex gap-2 sm:gap-4 items-center group">
           <BackArrowIcon stroke="var(--blue-800)" />
           <Typography
             variant="menu"
