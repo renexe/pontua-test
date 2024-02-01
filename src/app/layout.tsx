@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Script from "next/script";
+import Signature from "@/components/ui/atoms/signature";
 
 export default function RootLayout({
   children,
@@ -19,7 +20,6 @@ export default function RootLayout({
         "min-h-screen font-sans antialiased"
       )}>
         {children}
-
         <Script
           id="clarity-loader"
           strategy="afterInteractive"
