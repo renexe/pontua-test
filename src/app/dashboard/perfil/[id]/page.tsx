@@ -1,5 +1,5 @@
 import { Typography } from "@/components/ui/atoms/typography";
-import ProfileMenu from "@/components/ui/molecules/profile-menu";
+import ProfileContent from "@/components/ui/organisms/profile-content";
 
 async function getHero({ id }: { id: string }) {
   const res = await fetch(`https://gateway.marvel.com/v1/public/characters/${id}?ts=1&apikey=84d1bd4d3a025bf80b0d30ad747f85b8&hash=649c4fe1ca33ed38c47a7e08a732fa8a&limit=100&offset=20`)
@@ -25,7 +25,7 @@ export default async function AgentProfile({ params }: { params: { id: string } 
           {hero.name}
         </span>
       </Typography>
-      <ProfileMenu hero={hero} />
+      <ProfileContent hero={hero} />
     </section>
   );
 }
