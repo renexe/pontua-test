@@ -4,9 +4,9 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 const mockedUser = {
-  name: "Douglas",
-  email: "douglas@pontua.com.br",
-  password: "123456",
+  name: "Usuário Teste",
+  email: "usuario@teste.com",
+  password: "senha123",
   token:
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
 };

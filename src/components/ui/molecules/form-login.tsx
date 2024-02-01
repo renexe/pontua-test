@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/atoms/input"
 import { Button } from "@/components/ui/atoms/button";
 import { signIn } from "@/lib/actions";
 import CircularIcon from "../atoms/icons/circular";
+import { useToast } from "@/components/hooks/use-toast";
 
 export interface FormLoginProps {
   successfullLoginCallback: () => void
@@ -10,6 +11,7 @@ export interface FormLoginProps {
 
 const FormLogin = ({ successfullLoginCallback }: FormLoginProps) => {
   const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
     setLoading(true);
@@ -20,7 +22,10 @@ const FormLogin = ({ successfullLoginCallback }: FormLoginProps) => {
     if (result) {
       successfullLoginCallback();
     } else {
-      console.log(result)
+      toast({
+        title: "Dados de acesso incorretos.",
+        description: <span>Tente <b>usuario@teste.com</b> e <b>senha123</b></span>,
+      })
     }
     setLoading(false);
     return;
