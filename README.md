@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste Desenvolvedor Frontend - Pontua.
 
-## Getting Started
+Trata-se de um desafio proposto pela Pontua como parte de processo seletivo
+para vaga de desenvolvedor frontend.
 
-First, run the development server:
+Você pode conferir o projeto online no link abaixo
+###  [Live Demo](https://pontua-test.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tabela de conteúdos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Introdução](#introdução)
+- [Funcionalidades](#funcionalidades)
+- [Login](#login)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Introdução
 
-## Learn More
+A aplicação consiste em um formulário de login e um dashboard com informações sobre personagens da Marvel, sendo uma lista de personagens por páginas e um perfil com informações individuais de cada personagem.
 
-To learn more about Next.js, take a look at the following resources:
+Para isso foi utilizado a [API da Marvel](https://developer.marvel.com/) para buscar as informações dos personagens.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-## Deploy on Vercel
+- [React](https://pt-br.reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [React Spring](https://react-spring.dev/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A aplicação possui as seguintes funcionalidades:
+
+- [x] Login
+- [x] Logout
+- [x] Listagem de personagens
+- [x] Paginação
+- [x] Perfil do personagem
+- [x] Busca de personagens
+- [x] Responsividade
+- [x] Respostas animadas
+
+
+## Login
+
+Para fazer o login e ter acesso ao dashboard, utilize as seguintes credenciais:
+  
+  ```json
+    "email": "usuario@teste.com"
+    "password": "senha123"  
+  ```
