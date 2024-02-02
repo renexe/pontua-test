@@ -11,7 +11,7 @@ export default function DashboardLayout({
     <section className="flex">
       <MobileMenu />
       <SideBar />
-      <Signature textColor="text-black" />
+      <Signature textColor="text-black" className="absolute bottom-0 pb-2 bg-white" />
       {children}
     </section>
   )

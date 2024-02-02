@@ -5,9 +5,9 @@ import {
 } from "@radix-ui/react-icons"
 import { cn } from "@/lib/utils";
 
-const Signature = ({ textColor }: { textColor: "text-white" | "text-black" }) => {
+const Signature = ({ textColor, className }: { textColor: "text-white" | "text-black", className?: string }) => {
   return (
-    <div className="fixed bottom-2 w-full flex justify-center items-center gap-4 z-40">
+    <div className={cn("w-full flex justify-center items-center gap-4 z-40", className)}>
       <Link
         href="https://github.com/renexe/"
         target="_blank"
